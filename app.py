@@ -1,8 +1,15 @@
 from flask import Flask
 app = Flask(__name__)
 @app.route('/')
+#def status():
+#    return{'servico': 'OpsTrackAPI', 'status': 'online'}
+# /status — retorna o status do serviço
+
+@app.route("/status")
 def status():
-    return{'servico': 'OpsTrackAPI', 'status': 'online'}
+    return {
+        "status": "online"
+    }
 
 #teste de diff
 if __name__ == '__main__':
