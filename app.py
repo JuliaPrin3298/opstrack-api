@@ -11,6 +11,27 @@ def status():
         "status": "online"
     }
 
+@app.route("/tickets")
+def tickets():
+    return [
+        {
+            "id": 1,
+            "titulo": "Erro no login",
+            "status": "aberto"
+        },
+        {
+            "id": 2,
+            "titulo": "Problema no pagamento",
+            "status": "em andamento"
+        },
+        {
+            "id": 3,
+            "titulo": "Atualização de cadastro",
+            "status": "fechado"
+        }
+    ]
+
+
 #teste de diff
 if __name__ == '__main__':
     app.run(debug=True)
