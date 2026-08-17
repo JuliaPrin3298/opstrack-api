@@ -31,6 +31,13 @@ def tickets():
         }
     ]
 
+@app.route("/sobre")
+def sobre():
+    return {
+        "nome": "Minha API",
+        "versao": "1.0.0"
+    }
+
 
 #teste de diff
 if __name__ == '__main__':
