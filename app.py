@@ -4,11 +4,12 @@ app = Flask(__name__)
 #def status():
 #    return{'servico': 'OpsTrackAPI', 'status': 'online'}
 # /status — retorna o status do serviço
+# ajuste na api
 
 @app.route("/status")
 def status():
     return {
-        "status": "online"
+        "status": "active"
     }
 
 @app.route("/tickets")
