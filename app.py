@@ -1,16 +1,18 @@
 from flask import Flask
 app = Flask(__name__)
+
+
 @app.route('/')
-#def status():
+# def status():
 #    return{'servico': 'OpsTrackAPI', 'status': 'online'}
 # /status — retorna o status do serviço
 # ajuste na api
-
 @app.route("/status")
 def status():
     return {
         "status": "active"
     }
+
 
 @app.route("/tickets")
 def tickets():
@@ -32,6 +34,7 @@ def tickets():
         }
     ]
 
+
 @app.route("/sobre")
 def sobre():
     return {
@@ -40,6 +43,6 @@ def sobre():
     }
 
 
-#teste de diff
+# teste de diff
 if __name__ == '__main__':
     app.run(debug=True)
