@@ -28,4 +28,6 @@ jobs:
         run: flake8 .
 
       - name: Run tests with coverage
-        run: pytest --cov=app --cov=utils --cov-report=term-missing --cov-fail-under=85
+        env:
+          PYTHONPATH: .
+        run: python -m pytest --cov=app --cov=utils --cov-report=term-missing --cov-fail-under=85
